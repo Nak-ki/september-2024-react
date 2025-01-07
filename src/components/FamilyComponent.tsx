@@ -4,7 +4,7 @@ import {CharacterComponent} from "./CharacterComponent.tsx";
 const FamilyComponent = () => {
     return (
         <div className='font-mono'>
-            {simpsons.map((simpson, index) => <CharacterComponent key={index} simpson={simpson}/>)}
+            {simpsons.map((simpson, index) => <CharacterComponent key={index} simpson={simpson}>{simpson.info}</CharacterComponent>)}
         </div>
     );
 };

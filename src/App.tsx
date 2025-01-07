@@ -1,6 +1,6 @@
 
 import './App.css'
-import {FamilyComponent} from "./assets/components/FamilyComponent.tsx";
+import {FamilyComponent} from "./components/FamilyComponent.tsx";
 
 function App() {
 

@@ -1,4 +1,4 @@
-import {ISimpson} from "../../interfaces/simpson.ts";
+import {ISimpson} from "../interfaces/simpson.ts";
 
 export const simpsons: ISimpson[]= [
     {
