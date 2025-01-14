@@ -4,24 +4,27 @@ import { useEffect, useState} from "react";
 
 import {useLocation} from "react-router-dom";
 import {productService} from "../../services/productService.ts";
-import {ICartsList} from "../../interfaces/product.interface.ts";
+
+import {ICart} from "../../interfaces/cart.interface.ts";
 
 
 const Products= () => {
 
-    const [productsList, setProductsList] = useState<ICartsList>()
+    const [productsList, setProductsList] = useState<ICart[]>([])
     console.log(productsList)
+
+    const [cart] = productsList
 
     const {state} = useLocation()
 
 
     useEffect(() => {
-        productService.getCartsByUserId(state).then((carts) => setProductsList(carts))
+        productService.getCartsByUserId(state).then(({carts}) => setProductsList(carts))
     }, [state]);
     return (
         <div>
             {
-            productsList && productsList.carts[0].products.map(product => <Product key={product.id} product={product}/>)
+            cart && cart.products.map(product => <Product key={product.id} product={product}/>)
             }
         </div>
     );
