@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {MyContext} from "../hoc/myContex.tsx";
+import {MyContext} from "../../context/myContex.tsx";
 
 const Header = () => {
 

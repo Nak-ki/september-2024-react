@@ -1,7 +1,7 @@
 
 import './App.css'
 import {RouterProvider} from "react-router-dom";
-import {MyContext, switchTheme} from "./components/hoc/myContex.tsx";
+import {MyContext, switchTheme} from "./context/myContex.tsx";
 import {router} from "./routers/router.tsx";
 import {useState} from "react";
 
